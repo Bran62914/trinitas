@@ -6,13 +6,32 @@
     <title>Testing 2</title>
     <style>
 h1 {
-    color:crimson;
-    background-color:black;
+    color:transparent;
+    transition: all 1s;
+    background: linear-gradient(to right,green, yellow,blue,red,orange,violet,olive,navy,teal,brown);
+    background-size: 300%;
+    background-clip:text;
+    animation: magic .05s linear infinite;
 }
-    </style>
+h1:hover {
+    transform: scale(1.1)
+}
+
+
+@keyframes magic{
+    0%{ background-position:0%}
+    100%{ background-position:100%}
+
+} 
+    
+
+
+</style>
+
 </head>
 <body>
 <h1>Hello,world</h1>
+<h1>W website</h1>
 
     
 </body>
