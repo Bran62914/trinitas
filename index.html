@@ -7,10 +7,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Tirnitas site</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        h1 {
+            color:transparent;
+            transition: all 1s;
+            background: linear-gradient(to right,green, yellow,blue,red,orange,violet,olive,navy,teal,brown,purple,pink);
+            background-size: 300%;
+            background-clip:text;
+            animation: magic 4s linear infinite;
+        }
+        h1:hover {
+            transform: scale(1.1)
+        }
+        
+        
+        @keyframes magic{
+            0%{ background-position:0%}
+            100%{ background-position:100%}
+        
+        } 
+            
+        
+        
+        </style>
 </head>
 
-<body align="center">
-    <h1> WELCOME TO MY SITE</h1>
+<body>
+    <h1 align="center"> WELCOME TO MY SITE</h1>
 
 <iframe src="navigation.html" frameborder="23" height="130px" width="10%"></iframe>
 
