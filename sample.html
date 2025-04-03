@@ -6,15 +6,49 @@
   <meta name="description" content="Freshmen learning web development at Trinitas Christian School">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
+    #crest{
+      max-width: 100px;
+      position: sticky;
+      top: 20px;
+    }
+
+    main{
+      transition: all 1s;
+      transform: all 1s;
+      transform: scale(0.85) rotate(0);
+      opacity: 0.85; ;
+      padding: 1em 2em;
+      border: 1px solid black;
+      border-radius: 6em;
+      margin-left: 1em;
+      margin-right: 1em;
+      background-color:gray;
+      box-shadow: 5px 5px black,
+      10px 10px orange,
+      15px 15px blue;
+    }
+    main:hover {
+      opacity: 1;
+      transform: scale(1) rotate(360deg);
+      filter: grayscale(1);
+    }
+
+   
     /* Add your CSS styling here */
-    section[id= 'topics'] {
+    /*
+    = - this matches the whole value
+    ^ - ths matches the start of the value
+    $ - this matches the end of value */
+    /* section[id= 'topics'] {
       border-left: 10px solid green;
       border-right: 10px solid gold;
       border-top: 10px double gold;
-    }
+    } */
+
   </style>
 </head>
 <body>
+  <img id="crest" src="images/Crest.png">
   <header>
     <h1>Trinitas Code Club</h1>
     <nav>
