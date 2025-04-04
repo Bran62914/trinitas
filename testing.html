@@ -4,16 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>testing</title>
+    <style>
+
+#wheel{
+      transition: all 10s;
+      transform: all 1s;
+      transform: scale(0.85) rotate(0);
+      opacity: 0.85; 
+      padding: 1em 2em;
+      border: 1px solid transparent;
+      border-radius: 6em;
+      margin-left: 1em;
+      margin-right: 1em;
+
+}
+#wheel:hover {
+      opacity: 1;
+      transform: scale(1) rotate(10000deg);
+    
+    }
+
+
+
+
+    </style>
 </head>
 <body>
     <iframe src="navigation.html" frameborder="23" height="130px" width="10%"></iframe>
 
-    <marquee behavior="alternate" scrollamount="10" ><img src="images/retarded dog.jpeg" alt=""></marquee>
-
-    <marquee behavior="alternate" scrollamount="10"><img src="images/tism porcupine.jpeg" alt=""></marquee>
-
-    <marquee behavior="" direction=""> just do it</marquee>
+<img id="wheel"width="500px" height="500px" src="images/wheel.jpeg" alt="wheel">
    
+
+
+
+
+
+<marquee scrollamount="10" direction="side"><img src="images/Redbull f1.jpg" alt=""></marquee>
+<marquee scrollamount="11" direction="side" ><img src="images/Mc f1.jpg" alt=""></marquee>
 
 
 
