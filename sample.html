@@ -6,14 +6,27 @@
   <meta name="description" content="Freshmen learning web development at Trinitas Christian School">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
+    :root{
+      /* Our colors for dark and light mode */
+      --fg-light-color: black;
+      --bg-light-color: white;
+      --fg-dark-color: white;
+      --bg-dark-color: black;
+    }
+
+
+
+/* Determins the colors */
     body{
-background: red;
+background-color: var(--bg-light-color);
+color: var(--fg-light-color);
     }
      
     
-    @media (min-width: 800px) {
+    @media (prefers-color-scheme: dark) {
       body{
-        background: orange;
+        color: var(--fg-dark-color) ;
+        background-color: var(--bg-dark-color);
       }
     } 
 
@@ -26,7 +39,7 @@ background: red;
     }
 
     main{
-      transition: all 10s;
+      transition: all 60s;
       transform: all 1s;
       transform: scale(0.85) rotate(0);
       opacity: 0.85; ;
@@ -42,13 +55,13 @@ background: red;
     }
     main:hover {
       opacity: 1;
-      transform: scale(1) rotate(100000000000000000000000000000000000000000000000000000000000deg);
+      transform: scale(1) rotate(360deg);
       filter: grayscale(1);
     }
     /*This is a selector*/
     body{
       --fav_color: blue;
-      display:inline-flex;
+      /* display:inline-flex; */
     }
    
    
