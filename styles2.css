@@ -15,10 +15,12 @@
     100%{ background-position:100%}
 }
 iframe{
-    background-color: white;
+    background-color: black;
+    color: maroon;
 }
 body{
-background-color:dimgray;
+background-color: black;
+color: maroon;
 }
 #sp{
     font-size: 3pc
@@ -30,11 +32,11 @@ background-color:dimgray;
     transform: scale(0.85) rotate(0);
     opacity: 0.85; ; */
     padding: 1em 2em;
-    border: 1px solid black;
+    border: 1px solid dimgray;
     border-radius: 1em;
     margin-left: 1em;
     margin-right: 1em;
-     background-color:gray;
+     background-color:black;
     box-shadow: 5px 5px black,
     10px 10px maroon,
     15px 15px midnightblue;
@@ -48,11 +50,11 @@ background-color:dimgray;
     transform: scale(0.85) rotate(0);
     opacity: 0.85; ; */
     padding: 1em 2em;
-    border: 1px solid black;
+    border: 1px solid dimgrey;
     border-radius: 1em;
     margin-left: 1em;
     margin-right: 1em;
-     background-color:gray;
+     background-color: black;
     box-shadow: 5px 5px black,
     10px 10px  maroon,
     15px 15px midnightblue ;
