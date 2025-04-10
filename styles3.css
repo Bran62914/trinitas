@@ -1,4 +1,14 @@
 #opener{
-    background-color: navy;
-    color: dimgrey;
+    color: dimgrey; padding: 1em 2em;
+    border: 1px solid dimgray;
+    border-radius: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+     background-color: navy;
+    box-shadow: 5px 5px grey,
+    10px 10px dimgrey,
+    15px 15px midnightblue;
+} 
+body {
+    background-color: black;
 }
