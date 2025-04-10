@@ -1,0 +1,21 @@
+#zoom:checked + #box {
+    width: 10em;
+    height: 10em;
+    border: 1px solid black;
+    background: blue;
+    transition:all 2s;
+
+}
+
+#zoom:not(:checked) + #box {
+    width: 100em;
+    height: 20em;
+    border: 1px solid black;
+    background: maroon;
+    transition: 1s;
+}
+
+#funnybox{
+    --on-size: 2em;
+    --off-Size: 4em;
+}
