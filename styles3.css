@@ -1,3 +1,17 @@
+#header{
+    color:transparent;
+    transition: all 1s;
+    background: linear-gradient(to right,green, yellow,blue,red,orange,violet,olive,navy,teal,brown,purple,brown);
+    background-size: 300%;
+    background-clip:text;
+    animation: magic 1s linear infinite;
+    font-size: 300%;
+}
+@keyframes magic{
+    0%{ background-position:0%}
+    100%{ background-position:100%}
+
+} 
 #opener{
     color: dimgrey; padding: 1em 2em;
     border: 1px solid dimgray;
@@ -10,5 +24,13 @@
     15px 15px midnightblue;
 } 
 body {
-    background-color: black;
+    background-color: dimgrey;
+}
+#par{
+    color: black;
+}
+#crest{
+    max-width: 100px;
+    position: sticky;
+    top: 20px;
 }

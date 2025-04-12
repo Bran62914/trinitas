@@ -9,7 +9,7 @@
 
 #zoom:not(:checked) + #box {
     width: 100em;
-    height: 20em;
+    height: 10000em;
     border: 1px solid black;
     background: maroon;
     transition: 1s;
