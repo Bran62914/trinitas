@@ -60,4 +60,24 @@ color: maroon;
     15px 15px midnightblue ;
 }
 
+#f18{
+    font-size: 3pc;
+}
+#opener{
+    font-size: 1.5pc;
+    /* transition: all 10s;
+    transform: all 100s;
+    transform: scale(0.85) rotate(0);
+    opacity: 0.85; ; */
+    padding: 1em 2em;
+    border: 1px solid dimgray;
+    border-radius: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+     background-color:black;
+    box-shadow: 5px 5px black,
+    10px 10px maroon,
+    15px 15px midnightblue;
+}
+
 
