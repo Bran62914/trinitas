@@ -17,7 +17,7 @@ let tries = 10;
 let userAnswer = prompt("What is the secret message");
 
 while ( userAnswer != "gopackgo" && tries > 0 ) {
-    alert("your answer is invaild. Try again! You only have " + tries + " attempts remaining");
+    alert("HaHa you have the wrong answer. Try again! You only have " + tries + " attempts remaining");
     userAnswer = prompt("What is the secret message");
     tries = tries - 1;
 }
@@ -36,3 +36,21 @@ function renderTime() {
     el.textContent = timevalue;
 }
     
+
+//Setup tracking eyes!
+const eyes = document.querySelectorAll(".eye");
+
+document.addEventListener("mousemove", updateEyes);
+
+function updateEyes (event) {
+    for ( const eye of eyes ) {
+        const pupil = eye.querySelector(".pupil");
+        const shape = eye.getBoundingClientRect()
+        const dx = event.clientX - (shape.left + shape.width / 2);
+        const dy = event.clientY - (shape.top + shape.height / 2);
+        const angle = Math.atan2(dy, dx);
+        const x = Math.cos(angle) * 10;
+        const y = Math.sin(angle) * 10;
+        pupil.style.transform = `translate(${x}px, ${y}px)`;
+    }
+}
