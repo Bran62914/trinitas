@@ -2,7 +2,7 @@
 const h1 = document.getElementById("title");
 const h2 = document.querySelector("h2");
 const el = document.querySelector("#currenttime");
-const username = prompt("What is your name boy?");
+const username = prompt("What name is your my child?");
 
 
 
