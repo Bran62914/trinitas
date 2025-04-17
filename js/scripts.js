@@ -1,11 +1,10 @@
+
+function promptUser () {
 //these are all const because we expect no changes to their value
 const h1 = document.getElementById("title");
 const h2 = document.querySelector("h2");
 const el = document.querySelector("#currenttime");
 const username = prompt("What name is your my child?");
-
-
-
 //We are going to change this value at least once more
 let timevalue;
 
@@ -21,13 +20,14 @@ while ( userAnswer != "gopackgo" && tries > 0 ) {
     userAnswer = prompt("What is the secret message");
     tries = tries - 1;
 }
-
-
 //updates our clock every second
 setInterval( setTime, 1000);
 //greets the user by the name provided
 h1.textContent = "Hello," + username;
+//Setup tracking eyes!
+const eyes = document.querySelectorAll(".eye");
 
+document.addEventListener("mousemove", updateEyes);
 function setTime() {
     timevalue = new Date().toLocaleTimeString();
     renderTime();
@@ -37,10 +37,7 @@ function renderTime() {
 }
     
 
-//Setup tracking eyes!
-const eyes = document.querySelectorAll(".eye");
-
-document.addEventListener("mousemove", updateEyes);
+ 
 
 function updateEyes (event) {
     for ( const eye of eyes ) {
@@ -54,3 +51,17 @@ function updateEyes (event) {
         pupil.style.transform = `translate(${x}px, ${y}px)`;
     }
 }
+
+}
+
+function say (phrase) {
+    const utterance = new SpeechSynthesisUtterance(phrase);
+    speechSynthesis.speak(utterance);
+}
+
+const speakButton = document.querySelector("#sayPhrase");
+const phraseInput = document.querySelector("#phrase");
+
+speakButton.addEventListener("click",function () {
+    say(phraseInput.value);
+});
