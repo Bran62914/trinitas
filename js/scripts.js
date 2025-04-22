@@ -53,10 +53,11 @@ function updateEyes (event) {
 }
 
 }
-
+// This is a funtion named "say" it has the argument "phrase"
 function say (phrase) {
     const utterance = new SpeechSynthesisUtterance(phrase);
-    speechSynthesis.speak(utterance);
+    utterance.rate = 5;
+    speechSynthesis.speak(utterance); 
 }
 
 const speakButton = document.querySelector("#sayPhrase");
@@ -65,3 +66,5 @@ const phraseInput = document.querySelector("#phrase");
 speakButton.addEventListener("click",function () {
     say(phraseInput.value);
 });
+
+//Methods are funtions that belong to objects
