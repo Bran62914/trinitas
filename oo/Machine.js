@@ -14,8 +14,7 @@ export default class Machine {
             color:"gray",
             angle:0,
         };
-        console.log("Creating machine with weight of " + in_weight + "pounds");
-        console.log("oh, and its has coords of " + [x_coord, y_coord]);
+      const opts = { ...defaults, ...options};
         this.weight = opts.weight;
         this.location = opts.location;
         this.color = opts.color;
