@@ -1,20 +1,20 @@
-import Automobile from "./Automoblie.js";
+import Automobile from "./Automobile.js";
 
 export default class Tank extends Automobile {
   rounds;
 
-    constructor ( options = {}) {
+  constructor(options = {}) {
 
-        const defaults = {
-            rounds: 100
-        };
+    const defaults = {
+      rounds: 100
+    };
 
-        const opts = { ...defaults, ...options};
+    const opts = { ...defaults, ...options };
 
-        super( opts );
+    super(opts);
 
-        this.rounds = opts.rounds;
+    this.rounds = opts.rounds;
 
-        console.log("Your tank is alive");
-    }
- }
+    console.log("Your tank is alive");
+  }
+}

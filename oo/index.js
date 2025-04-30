@@ -1,8 +1,9 @@
 import Tank from "./Tank.js";
 
- const armytank = new Tank({ rounds: 5, color: "green" });
- const pinktank = new Tank ( color = pink)
- armytank.render();
-    // const vehicle = new automobile( 0.5 );
-    // const faxmachine = new machine(500, 50, 32);
-    
+const armyTank = new Tank({ rounds: 5, color: "green" });
+const pinkTank = new Tank({ color: "pink" });
+
+armyTank.render();
+// const vehicle = new Automobile( 0.5 );
+// const faxMachine = new Machine(500, 50, 32);
+
