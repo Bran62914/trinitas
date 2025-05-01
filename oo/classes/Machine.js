@@ -37,9 +37,14 @@ export default class Machine {
         this.element.style.width = "30px";
         this.element.style.height = "10px";
         this.element.style.transform = "rotate(" + this.angle + "rad)";
+        this.element.style.position = "absolute";
 
         // Place our element on the page itself
         document.body.appendChild(this.element);
     }
 
+
+    update () {
+        this.element.style.left = this.location.x + "px";
+    } 
 } 
