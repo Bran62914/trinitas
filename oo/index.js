@@ -1,29 +1,51 @@
 import Tank from "./classes/Tank.js";
 
-const armyTank = new Tank({ rounds: 5, color: "green"  });
+const armyTank = new Tank({ rounds: 5, color: "green" });
 const pinkTank = new Tank({ color: "pink" });
 
 armyTank.render();
-// const vehicle = new Automobile( 0.5 );
-// const faxMachine = new Machine(500, 50, 32);
 
-function setupkeyBinding () {
+const pressedKeys = {
+    "KeyA": false,
+    "KeyS": false,
+    "KeyD": false,
+    "KeyW": false,
+    "ArrowUp": false,
+    "ArrowDown": false,
+    "ArrowRight": false,
+    "ArrowLeft": false,
+};
 
-    function handleKeyUp(event) {
-
+function update() {
+    //if the user is pressing W or arrowup 
+    if (pressedKeys.KeyW || pressedKeys.ArrowUp) {
+        armyTank.driveForward();
+    } else if (pressedKeys.KeyS || pressedKeys.ArrowDown) {
+        armyTank.driveBackward();
     }
 
-    function handleKeyDown(event) {
-        console.log(event.code);
-        if (event.code == "KeyW") {
-            armyTank.driveForward();
-            armyTank.update();
-            console.log(armyTank.location.x);
-        }
+    //if the user is pressing W or arrowup 
+    if (pressedKeys.KeyA || pressedKeys.ArrowLeft) {
+        armyTank.turnLeft();
+    } else if (pressedKeys.KeyD || pressedKeys.ArrowRight) {
+        armyTank.turnRight();
     }
 
-    document.addEventListener("keyup", handleKeyUp);
-    document.addEventListener("keydown", handleKeyDown);
+    armyTank.update();
+
+    requestAnimationFrame(update);
 }
 
-setupkeyBinding();
+update();
+
+document.addEventListener("keydown", (event) => {
+    if (event.code in pressedKeys) {
+        pressedKeys[event.code] = true;
+    }
+});
+
+document.addEventListener("keyup", (event) => {
+    if (event.code in pressedKeys) {
+        pressedKeys[event.code] = false;
+    }
+});
