@@ -8,8 +8,8 @@ export default class Automobile extends Machine {
     constructor(options = {}) {
         const defaults = {
             fuel: 100,
-            moveSpeed: 5,
-            turnSpeed: 0.15,
+            moveSpeed: 10,
+            turnSpeed: .15,
         };
 
         const opts = { ...defaults, ...options };
@@ -24,13 +24,18 @@ export default class Automobile extends Machine {
     driveForward() {
         const newX = this.location.x + Math.cos(this.angle) * this.moveSpeed;
         const newY = this.location.y + Math.sin(this.angle) * this.moveSpeed;
-        this.location.x += Math.cos(this.angle) * this.moveSpeed;
-        this.location.y += Math.sin(this.angle) * this.moveSpeed;
+
+        this.location.x = Math.max( 0, Math.min( innerWidth, newX))
+        this.location.y = Math.max( 0, Math.min( innerHeight, newY))
     }
 
     driveBackward() {
-        this.location.x -= Math.cos(this.angle) * this.moveSpeed;
-        this.location.y -= Math.sin(this.angle) * this.moveSpeed;
+         const newX = this.location.x - Math.cos(this.angle) * this.moveSpeed;
+         const newY = this.location.y - Math.sin(this.angle) * this.moveSpeed;
+
+        this.location.x = Math.max( 0, Math.min( innerWidth, newX))
+        this.location.y = Math.max( 0, Math.min( innerHeight, newY))
+        
     }
 
     turnLeft() {
